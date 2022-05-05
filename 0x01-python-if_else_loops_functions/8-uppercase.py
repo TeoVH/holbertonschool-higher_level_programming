@@ -8,5 +8,6 @@ def uppercase(str):
             c = c - 32
             print(f"{chr(c)}", end="")
         else:
-            print(f"{chr(c)}", end="")
+            c = chr(c)
+            print(c, end="")
     print()
