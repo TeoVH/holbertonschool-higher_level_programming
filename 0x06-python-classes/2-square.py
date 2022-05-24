@@ -8,7 +8,7 @@ Defines class Square with private attribute and size validation
 
 class Square:
     """Class Square"""
-    def __init__(self, size):
+    def __init__(self, size=0):
         """
         Initializes square
 
