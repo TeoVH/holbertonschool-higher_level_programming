@@ -5,9 +5,9 @@ def safe_print_list(my_list=[], x=0):
     i = 0
     while i < x:
         try:
-            print("{}".formar(my_list[i]), end="")
+            print(my_list[i], end="")
+            i += 1
         except IndexError:
             break
-        i += 1
     print("")
-    return (i)
+    return i
