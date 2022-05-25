@@ -9,39 +9,25 @@ Update the private attribute __size
 class Square:
     """
     Class Square
-
-    Functions:
-        __init__(self, size=0):
-        size(self):
-        size(self, value):
-        area(self):
     """
     def __init__(self, size=0):
         """
         Initializes square
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
-        """
-        Return: size
-        """
         return self.__size
 
-    @property setter
+    @size.setter
     def size(self, value):
-        """
-        Setter
-
-        value: if size >= 0 sets size to value
-        """
-        if type(size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self.__size = value
 
     def area(self):
         """
