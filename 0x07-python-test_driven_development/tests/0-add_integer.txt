@@ -45,7 +45,7 @@ Test two negative digits:
 	-9
 
 	>>> add_integer(-4.0, -5.0)
-	-9	
+	-9
 
 ----------------------------
 FAIL CASES:
@@ -92,7 +92,9 @@ Test float overflow:
 	...
 	OverflowError: cannot convert float infinity to integer
 
-	>>> add_integer(NaN)
+test value error:
+
+	>>> add_integer(float("Nan"))
 	Traceback (monst recent call last):
 	...
-	OverflowError: cannot convert float NaN to integer
+	ValueError: cannot convert float NaN to integer
