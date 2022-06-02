@@ -77,7 +77,7 @@ Test invalid args:
 	>>> add_integer(1, "2")
 	Traceback (most recent call last):
 	...
-	TypeError: a must be an integer
+	TypeError: b must be an integer
 	
 Test float overflow:
 
