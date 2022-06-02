@@ -94,7 +94,7 @@ Test float overflow:
 
 test value error:
 
-	>>> add_integer(float("Nan"))
+	>>> add_integer(1, float("Nan"))
 	Traceback (monst recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
