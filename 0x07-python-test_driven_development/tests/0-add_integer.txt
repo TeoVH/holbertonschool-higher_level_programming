@@ -47,6 +47,11 @@ Test two negative digits:
 	>>> add_integer(-4.0, -5.0)
 	-9
 
+Test int and number as str:
+	
+	>>> add_integer(1, "2")
+	3
+
 ----------------------------
 FAIL CASES:
 
