@@ -16,17 +16,17 @@ Test basic:
 Test first_name:
 
 	>>> say_my_name("John")
-	My name is John
+	My name is John 
 
 Test last_name:
 
-	>>> say_my_name("", "White")
-	My name is  White
+	>>> say_my_name("", "Smith")
+	My name is  Smith
 
 Test both empty:
 
 	>>> say_my_name("", "")
-	My name is
+	My name is  
 
 ----------------------------
 FAIL CASES:
