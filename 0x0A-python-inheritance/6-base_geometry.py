@@ -12,7 +12,6 @@ class BaseGeometry:
     Methods:
         area()
     """
-    
     def area(self):
         """
         Function with a Exception raise message
