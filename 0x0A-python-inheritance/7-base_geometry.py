@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class BaseGeometry with publoc methods
+Class BaseGeometry with public methods
 """
 
 
