@@ -13,8 +13,10 @@ class BaseGeometry:
         area()
         integer_validator()
     """
-    
     def area(self):
+        """
+        Function with a Exception raise message
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
