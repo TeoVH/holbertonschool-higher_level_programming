@@ -1,0 +1,79 @@
+The ''7-base_geometry'' module
+============================
+
+Using ''BaseGeometry''
+----------------------------
+
+First import ''BaseGeometry'' from the module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+----------------------------
+FAIL CASES:
+
+    >>> bg = BaseGeometry()
+
+Test no args:
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test negative value:
+
+    >>> bg.integer_validator("prueba", -6)
+    Traceback (most recent call last):
+    ...
+    ValueError: prueba must be greater than 0
+
+Test value is 0:
+
+    >>> bg.integer_validator("prueba", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: prueba must be greater than 0
+
+Test diferent types:
+
+    >>> bg.integer_validator("prueba", [8, 9])
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", "test")
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", (7, 9))
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", {45, 17})
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+    >>> bg.integer_validator("prueba", 4.6)
+    Traceback (most recent call last):
+    ...
+    TypeError: prueba must be an integer
+
+Test more args:
+
+    >>> bg.integer_validator(24, 6, 13)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
