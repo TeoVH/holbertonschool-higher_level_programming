@@ -51,7 +51,7 @@ Test diferent types:
     ...
     TypeError: prueba must be an integer
 
-    >>> bg.integer_validator("prueba", True)
+    >>> bg.integer_validator('prueba', True)
     Traceback (most recent call last):
     ...
     TypeError: prueba must be an integer
