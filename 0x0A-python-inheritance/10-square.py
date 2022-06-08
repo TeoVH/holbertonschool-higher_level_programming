@@ -30,4 +30,4 @@ class Square(Rectangle):
         """
         Functions that returns the rectangle area
         """
-        return (self.__size ** 2)
+        return (self.__size * self.__size)
