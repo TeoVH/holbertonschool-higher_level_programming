@@ -62,3 +62,65 @@ Test negative floats:
     >>> my_list.append(-0.1)
     >>> my_list.print_sorted()
     [-6.0, -4.2, -3.1, -2.0, -0.1]
+
+Test char:
+
+    >>> my_list = MyList()
+    >>> my_list.append("m")
+    >>> my_list.append("a")
+    >>> my_list.append("t")
+    >>> my_list.append("e")
+    >>> my_list.append("o")
+    >>> my_list.print_sorted()
+    ['a', 'e', 'm', 'o', 't']
+
+Test str:
+
+    >>> my_list = MyList()
+    >>> my_list.append("mateo")
+    >>> my_list.append("julio")
+    >>> my_list.append("duberney")
+    >>> my_list.append("ana")
+    >>> my_list.append("maria")
+    >>> my_list.print_sorted()
+    ['ana', 'duberney', 'julio', 'maria', 'mateo']
+
+Test bool:
+
+    >>> my_list = MyList()
+    >>> my_list.append(True)
+    >>> my_list.append(False)
+    >>> my_list.append(True)
+    >>> my_list.append(False)
+    >>> my_list.append(True)
+    >>> my_list.print_sorted()
+    [False, False, True, True, True]
+
+----------------------------
+FAIL CASES:
+
+Test int and str:
+
+    >>> my_list = MyList()
+    >>> my_list.append(24)
+    >>> my_list.append("julio")
+    >>> my_list.append(6)
+    >>> my_list.append("ana")
+    >>> my_list.append(20)
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'str' and 'int'
+
+Test None:
+
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(20)
+    >>> my_list.append(None)
+    >>> my_list.append("Juliana")
+    >>> my_list.append(None)
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'NoneType' and 'int'
