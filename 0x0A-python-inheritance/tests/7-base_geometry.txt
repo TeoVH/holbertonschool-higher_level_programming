@@ -77,3 +77,15 @@ Test more args:
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Test not implemented methods:
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> bg.area(8)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
