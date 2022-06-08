@@ -11,10 +11,9 @@ First import ''BaseGeometry'' from the module:
 ----------------------------
 FAIL CASES:
 
-    >>> bg = BaseGeometry()
-
 Test no args:
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
@@ -22,6 +21,7 @@ Test no args:
 
 Test negative value:
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("prueba", -6)
     Traceback (most recent call last):
     ...
@@ -29,6 +29,7 @@ Test negative value:
 
 Test value is 0:
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("prueba", 0)
     Traceback (most recent call last):
     ...
@@ -36,6 +37,8 @@ Test value is 0:
 
 Test diferent types:
 
+    >>> bg = BaseGeometry()
+    
     >>> bg.integer_validator("prueba", [8, 9])
     Traceback (most recent call last):
     ...
