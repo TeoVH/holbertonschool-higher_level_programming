@@ -13,28 +13,20 @@ FAIL CASES:
 
     >>> bg = BaseGeometry()
 
-Test no args:
-
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-Test negative value:
 
     >>> bg.integer_validator("prueba", -6)
     Traceback (most recent call last):
     ...
     ValueError: prueba must be greater than 0
 
-Test value is 0:
-
     >>> bg.integer_validator("prueba", 0)
     Traceback (most recent call last):
     ...
     ValueError: prueba must be greater than 0
-
-Test diferent types:
 
     >>> bg.integer_validator("prueba", [8, 9])
     Traceback (most recent call last):
@@ -51,10 +43,10 @@ Test diferent types:
     ...
     TypeError: prueba must be an integer
 
-    >>> bg.integer_validator('prueba', True)
+    >>> bg.integer_validator('test', True)
     Traceback (most recent call last):
     ...
-    TypeError: prueba must be an integer
+    TypeError: test must be an integer
 
     >>> bg.integer_validator("prueba", (7, 9))
     Traceback (most recent call last):
@@ -71,14 +63,10 @@ Test diferent types:
     ...
     TypeError: prueba must be an integer
 
-Test more args:
-
     >>> bg.integer_validator(24, 6, 13)
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-Test not implemented methods:
 
     >>> bg.area()
     Traceback (most recent call last):
