@@ -128,6 +128,16 @@ Test bool:
     >>> print(my_list)
     [True, False, True, False, True]
 
+Test list void:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
+    >>> print(my_list)
+    []
+
 ----------------------------
 FAIL CASES:
 
