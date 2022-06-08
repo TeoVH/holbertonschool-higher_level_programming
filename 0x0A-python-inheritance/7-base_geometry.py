@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-7. Integer validator
-Class BaseGeometry with public instance methods
-"""
+
+'''Write a class BaseGeometry (based on 6-base_geometry.py)'''
 
 
 class BaseGeometry:
-    """
-    Class BaseGeometry
-    """
+    '''Initialize the class BaseGeometry'''
     def area(self):
         raise Exception("area() is not implemented")
 
