@@ -11,69 +11,69 @@ First import ''BaseGeometry'' from the module:
 ----------------------------
 FAIL CASES:
 
-    >>> bg = BaseGeometry()
+>>> bg = BaseGeometry()
 
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-    >>> bg.integer_validator("prueba", -6)
-    Traceback (most recent call last):
-    ...
-    ValueError: prueba must be greater than 0
+>>> bg.integer_validator("algo", -6)
+Traceback (most recent call last):
+...
+ValueError: algo must be greater than 0
 
-    >>> bg.integer_validator("prueba", 0)
-    Traceback (most recent call last):
-    ...
-    ValueError: prueba must be greater than 0
+>>> bg.integer_validator("algo", 0)
+Traceback (most recent call last):
+...
+ValueError: algo must be greater than 0
 
-    >>> bg.integer_validator("prueba", [8, 9])
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", [8, 9])
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator("prueba", None)
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", None)
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator("prueba", "test")
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", "more")
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator('test', True)
-    Traceback (most recent call last):
-    ...
-    TypeError: test must be an integer
+>>> bg.integer_validator('age', True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
 
-    >>> bg.integer_validator("prueba", (7, 9))
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", (7, 9))
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator("prueba", {45, 17})
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", {45, 17})
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator("prueba", 4.6)
-    Traceback (most recent call last):
-    ...
-    TypeError: prueba must be an integer
+>>> bg.integer_validator("algo", 4.6)
+Traceback (most recent call last):
+...
+TypeError: algo must be an integer
 
-    >>> bg.integer_validator(24, 6, 13)
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+>>> bg.integer_validator(5, 6, 8)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
-    >>> bg.area()
-    Traceback (most recent call last):
-    ...
-    Exception: area() is not implemented
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
 
-    >>> bg.area(8)
-    Traceback (most recent call last):
-    ...
-    TypeError: area() takes 1 positional argument but 2 were given
+>>> bg.area(8)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
