@@ -2,6 +2,10 @@
 The ``7-base_geometry`` module
 ==============================
 
+Using ''BaseGeometry''
+----------------------------
+
+First import ''BaseGeometry'' from the module:
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -14,22 +18,22 @@ The ``7-base_geometry`` module
 >>> type(BaseGeometry())
 <class '7-base_geometry.BaseGeometry'>
 
->>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("test", 12)
 
->>> bg.integer_validator("name", "John")
+>>> bg.integer_validator("prueba", "test")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("age", 0)
+>>> bg.integer_validator("test", 0)
 Traceback (most recent call last):
 ...
-ValueError: age must be greater than 0
+ValueError: test must be greater than 0
 
->>> bg.integer_validator("distance", -4)
+>>> bg.integer_validator("prueba", -4)
 Traceback (most recent call last):
 ...
-ValueError: distance must be greater than 0
+ValueError: prueba must be greater than 0
 
 >>> bg.area()
 Traceback (most recent call last):
@@ -57,74 +61,74 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 Other cases on 2nd argument
 ---------------------------
 
->>> bg.integer_validator("distance", 1.4)
+>>> bg.integer_validator("test", 1.4)
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", True)
+>>> bg.integer_validator("prueba", True)
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", None)
+>>> bg.integer_validator("test", None)
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", [])
+>>> bg.integer_validator("prueba", [])
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", [1])
+>>> bg.integer_validator("test", [1])
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", ())
+>>> bg.integer_validator("prueba", ())
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", (1))
+>>> bg.integer_validator("test", (1))
 
->>> bg.integer_validator("distance", {})
+>>> bg.integer_validator("prueba", {})
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", {"a": 1})
+>>> bg.integer_validator("test", {"a": 1})
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", {3, 4})
+>>> bg.integer_validator("prueba", {3, 4})
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", "")
+>>> bg.integer_validator("test", "")
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", bg)
+>>> bg.integer_validator("prueba", bg)
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", dir())
+>>> bg.integer_validator("test", dir())
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
 
->>> bg.integer_validator("distance", BaseGeometry())
+>>> bg.integer_validator("prueba", BaseGeometry())
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: prueba must be an integer
 
->>> bg.integer_validator("distance", BaseGeometry)
+>>> bg.integer_validator("test", BaseGeometry)
 Traceback (most recent call last):
 ...
-TypeError: distance must be an integer
+TypeError: test must be an integer
