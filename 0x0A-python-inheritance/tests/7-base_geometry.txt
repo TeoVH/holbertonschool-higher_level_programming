@@ -1,15 +1,20 @@
-The ''7-base_geometry'' module
-============================
+==================================
+Test for "7-base_geometry.py" module
+==================================
 
-Using ''BaseGeometry''
-----------------------------
+The function in this module ''BaseGeometry''
 
-First import ''BaseGeometry'' from the module:
+-------------------------------------------
 
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Import from module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-----------------------------
 
+Testing:
+==================================
+
+integer
+----------------------------------
     >>> bg = BaseGeometry()
 
     >>> bg.integer_validator()
