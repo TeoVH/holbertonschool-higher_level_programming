@@ -14,5 +14,5 @@ try:
 except Exception:
     item = []
 for i in sys.argv[1:]:
-    item.append(sys.argv[i])
+    item.append(i)
 save_to_json_file(item, "add_item.json")
