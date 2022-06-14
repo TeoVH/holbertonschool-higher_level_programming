@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class Rectangle: class Rectangle that inherits from Base
+class Rectangle: class Rectangle that inherits from Base
 """
 from models.base import Base
 
@@ -9,7 +9,6 @@ class Rectangle(Base):
     """
     class Rectangle inherits from Base
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initialize Rectangle
