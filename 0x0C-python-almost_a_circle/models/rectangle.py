@@ -72,9 +72,8 @@ class Rectangle(Base):
         return (self.__width * self.__height)
 
     def display(self):
-        print("\n" * self.__y +
-              "\n".join(" " * self.__x + "#" * self.__width
-                        for i in range(self.__height)))
+        print("\n" * self.y +
+              (" " * self.x + "#" * self.width + "\n") * self.height, end="")
 
     def __str__(self):
         msg = "[Rectangle] ({}) {}/{} - {}/{}".format(
