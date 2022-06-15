@@ -4,6 +4,7 @@ Class Base: is the base class of all other classes in this project
 """
 import json
 
+
 class Base:
     """
     class Base
