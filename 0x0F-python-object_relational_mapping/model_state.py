@@ -12,7 +12,6 @@ Base = declarative_base()
 class State(Base):
     """
     Inherit from Base
-    
     Attributes:
         -id
         -name
